@@ -42,6 +42,8 @@
       "type": "shell",
       "execute_command": "echo '{{user `ubuntu`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
+	"export http_proxy=http://165.225.106.34:80",
+	"export https_proxy=https://165.225.106.34:80",
         "mkdir -p /etc/apt && sudo touch /etc/apt/apt.conf",
         "cp /tmp/apt.conf /etc/apt/apt.conf",
         "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes python2.7",
