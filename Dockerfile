@@ -9,3 +9,4 @@ ENV http_proxy ""
 ENV https_proxy ""
 ENTRYPOINT ["python"]
 CMD ["system-time.py"]
+EXPOSE 10002
